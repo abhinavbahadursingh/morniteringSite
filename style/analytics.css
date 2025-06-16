@@ -1,0 +1,429 @@
+/* Basic Reset & Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1b26; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling (Reused from previous) */
+.header {
+    background-color: #21222e; /* Slightly lighter dark for header */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.header-left h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.live-tag {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right i {
+    font-size: 20px;
+    margin-left: 25px;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.header-right span {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+/* Main Content Layout for Analytics */
+.main-content.analytics-content {
+    flex: 1;
+    padding: 20px 30px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.content-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: #333646;
+    color: #e0e0e0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn:hover {
+    background-color: #44475a;
+}
+
+.export-btn {
+    background-color: #007bff; /* Blue for export button */
+}
+
+.export-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Analytics Panels Layout */
+.analytics-panels {
+    display: flex;
+    gap: 20px;
+}
+
+.left-analytics-panel {
+    flex: 2; /* Takes more space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-analytics-panel {
+    flex: 1; /* Takes less space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: #21222e;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #333646;
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Chart Card Specifics */
+.chart-card .chart-container {
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    position: relative; /* For placeholder positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Placeholder Chart Styles (for visual representation without JS library) */
+.chart-placeholder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end; /* For bar chart to start from bottom */
+    padding: 0 10px; /* Padding for bars */
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflowing labels if any */
+}
+
+.chart-placeholder svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Line Chart Placeholder (using SVG) */
+.line-chart-placeholder {
+    background-color: #2a2b3c; /* Slightly different background for charts */
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+.line-chart-placeholder text {
+    fill: #a0a0a0;
+}
+
+/* Bar Chart Placeholder */
+.bar-chart-placeholder {
+    background-color: #2a2b3c;
+    border-radius: 4px;
+    border: 1px solid #333;
+    display: flex;
+    gap: 15px; /* Spacing between bars */
+    justify-content: space-around;
+    padding-bottom: 25px; /* Space for x-axis labels */
+    position: relative;
+}
+
+.bar-chart-placeholder .bar {
+    flex: 1; /* Equal width for bars */
+    background-color: #007bff; /* Blue for bars */
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5px; /* Space for label */
+}
+
+.bar-chart-placeholder .bar .label {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    position: absolute;
+    top: -18px; /* Position above bar */
+    background: rgba(0,0,0,0.4);
+    padding: 2px 5px;
+    border-radius: 3px;
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.2s ease;
+}
+
+.bar-chart-placeholder .bar:hover .label {
+    opacity: 1; /* Show on hover */
+}
+
+.bar-chart-placeholder .x-axis-labels {
+    position: absolute;
+    bottom: 5px;
+    width: calc(100% - 30px); /* Adjust for padding */
+    display: flex;
+    justify-content: space-around;
+    color: #a0a0a0;
+    font-size: 12px;
+}
+.bar-chart-placeholder .x-axis-labels span {
+    flex: 1;
+    text-align: center;
+}
+
+
+/* Key Metrics */
+.metrics-card ul {
+    list-style: none;
+}
+
+.metrics-card li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333646;
+}
+
+.metrics-card li:last-child {
+    border-bottom: none;
+}
+
+.metrics-card li span:first-child {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.metric-value {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trend {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.trend.positive {
+    color: #28a745; /* Green */
+    background-color: rgba(40, 167, 69, 0.2);
+}
+
+.trend.negative {
+    color: #dc3545; /* Red */
+    background-color: rgba(220, 53, 69, 0.2);
+}
+
+/* Traffic Patterns */
+.patterns-card ul {
+    list-style: none;
+}
+
+.patterns-card li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333646;
+}
+
+.patterns-card li:last-child {
+    border-bottom: none;
+}
+
+.patterns-card li span:first-child {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.patterns-card li small {
+    display: block;
+    font-size: 13px;
+    color: #a0a0a0;
+    margin-top: 3px;
+}
+
+.tag {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tag.high {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffc107; /* Yellow */
+}
+.tag.medium {
+    background-color: rgba(253, 126, 20, 0.2);
+    color: #fd7e14; /* Orange */
+}
+.tag.critical {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #dc3545; /* Red */
+}
+.tag.low {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #28a745; /* Green */
+}
+
+
+/* Basic Responsiveness */
+@media (max-width: 1024px) {
+    .analytics-panels {
+        flex-direction: column;
+    }
+    .left-analytics-panel, .right-analytics-panel {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+    .header-left h1 {
+        font-size: 20px;
+    }
+    .header-right i {
+        margin-left: 15px;
+    }
+    .main-content.analytics-content {
+        padding: 15px 20px;
+    }
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .content-header h2 {
+        font-size: 24px;
+    }
+    .header-actions {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .action-btn {
+        flex: 1 1 auto; /* Allow buttons to grow and wrap */
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .header-right {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    .header-right i, .header-right span {
+        margin: 0;
+    }
+    .card h3 {
+        font-size: 18px;
+    }
+    .metrics-card li span:first-child {
+        font-size: 14px;
+    }
+    .metric-value {
+        font-size: 16px;
+    }
+    .trend {
+        font-size: 12px;
+        padding: 1px 4px;
+    }
+    .patterns-card li span:first-child {
+        font-size: 14px;
+    }
+    .patterns-card li small {
+        font-size: 11px;
+    }
+    .tag {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Traffic-AI Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">T</div>
+                <div class="logo-text">Traffic-AI</div>
+            </div>
+
+            <nav>
+                <div class="nav-item active">
+                    <i class="fas fa-video nav-icon"></i> <span>CCTV Feeds</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-bullseye nav-icon"></i> <a href="./track.html"><span>Track</span></a>
+                    </div>
+                <div class="nav-item">
+                    <i class="fas fa-exclamation-triangle nav-icon"></i> <a href="./alerts.html"><span>Alerts</span></a>
+                    </div>
+                <div class="nav-item">
+                    <i class="fas fa-chart-bar nav-icon"></i> <a href="./analytics.html"><span>Analytics</span></a>
+                </div>
+            </nav>
+
+            <div class="user-info">
+                <!-- <div class="user-avatar">JD</div> -->
+                <div>
+                    <!-- <div class="user-details">John Doe</div>
+                    <div class="user-role">Traffic Admin</div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <h1 class="header-title">Integrated Command and Control center</h1>
+                    <div class="status-badge">Live</div>
+                </div>
+                <div class="header-right">
+                    <div class="admin-info">
+                        <div class="notification-icon">
+                            <i class="fas fa-bell"></i> <div class="notification-badge">1</div>
+                        </div>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: 20px; font-size: 20px;">CCTV Feeds</h2>
+
+            <div class="content-layout">
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <video class="traffic-video" autoplay muted loop playsinline poster="./image_930a08.jpg">
+                                <source src="./assets/videos/test_video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                        <div class="video-overlay"></div>
+
+                        <div class="video-controls">
+                            <div class="live-indicator">
+                                <div class="live-dot"></div>
+                                Live
+                            </div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="camera-name">Camera 1</div>
+                            <div class="camera-location">Junction 1</div>
+                        </div>
+
+                        <button class="expand-btn"><i class="fas fa-expand"></i></button> </div>
+
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <video class="traffic-video" autoplay muted loop playsinline poster="./image_930a08.jpg">
+                                <source src="./assets/videos/traffic1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            </div>
+                        <div class="video-overlay"></div>
+                        <div class="video-controls">
+                            <div class="live-indicator">
+                                <div class="live-dot"></div>
+                                Live
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <div class="camera-name">Camera 2</div>
+                            <div class="camera-location">Junction 2</div>
+                        </div>
+                        <button class="expand-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <video class="traffic-video" autoplay muted loop playsinline poster="./image_930a08.jpg">
+                                <source src="./assets/videos/video1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            </div>
+                        <div class="video-overlay"></div>
+                        <div class="video-controls">
+                            <div class="live-indicator">
+                                <div class="live-dot"></div>
+                                Live
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <div class="camera-name">Camera 3</div>
+                            <div class="camera-location">Junction 3</div>
+                        </div>
+                        <button class="expand-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <video class="traffic-video" autoplay muted loop playsinline poster="./image_930a08.jpg">
+                                <source src="./assets/videos/video3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            </div>
+                        <div class="video-overlay"></div>
+                        <div class="video-controls">
+                            <div class="live-indicator">
+                                <div class="live-dot"></div>
+                                Live
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <div class="camera-name">Camera 4</div>
+                            <div class="camera-location">Junction 4</div>
+                        </div>
+                        <button class="expand-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">Detection Status</h3>
+
+                    <div class="stat-item">
+                        <span class="stat-label">Vehicles Detected</span>
+                        <div>
+                            <span class="stat-value">45</span>
+                            <span class="stat-trend trend-up">↑2</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <span class="stat-label">Average Speed</span>
+                        <div>
+                            <span class="stat-value">42 km/h</span>
+                            <span class="stat-trend trend-down">↓5</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <span class="stat-label">Traffic Density</span>
+                        <div>
+                            <span class="stat-value">Medium</span>
+                            <span class="stat-trend trend-up">↑</span>
+                        </div>
+                    </div>
+
+                    <button class="analytics-btn" onclick="showAnalytics()">View Detailed Analytics</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>

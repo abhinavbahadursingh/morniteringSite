@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Alerts Dashboard</title>
+    <link rel="stylesheet" href="./style/allerts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            <div class="header-left">
+                <h1>Integrated Command and Control center <span class="live-tag">LIVE</span></h1>
+            </div>
+            <div class="header-right">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-cog"></i>
+                <i class="fas fa-user-circle"></i>
+                <span>Admin</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="left-panel">
+                <div class="panel-header">
+                    <h2>System Alerts <span class="new-alerts">3 new</span></h2>
+                    <p>Monitor and manage all system notifications.</p>
+                    <div class="panel-actions">
+                        <!-- <div class="dropdown">
+                            <button class="dropdown-btn">All Alerts <i class="fas fa-chevron-down"></i></button>
+                            </div> -->
+                        <!-- <button class="mark-read-btn"><i class="fas fa-check-double"></i> Mark All Read</button> -->
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search alerts...">
+                </div>
+
+                <div class="recent-alerts">
+                    <h3>Recent Alerts</h3>
+                    <div class="alert-item">
+                        <div class="alert-icon danger"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="alert-content">
+                            <h4>High Traffic Congestion <span class="new-tag">New</span></h4>
+                            <p>Traffic density exceeding normal threshold by 150%</p>
+                            <div class="alert-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Main Street Junction</span>
+                                <span>2 mins ago</span>
+                            </div>
+                        </div>
+                        <div class="alert-action"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+
+                    <div class="alert-item">
+                        <div class="alert-icon warning"><i class="fas fa-ambulance"></i></div>
+                        <div class="alert-content">
+                            <h4>Emergency Vehicle Approaching <span class="new-tag">New</span></h4>
+                            <p>Ambulance requesting priority signal clearance</p>
+                            <div class="alert-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> North Avenue</span>
+                                <span>5 mins ago</span>
+                            </div>
+                        </div>
+                        <div class="alert-action"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+
+                    <div class="alert-item">
+                        <div class="alert-icon danger"><i class="fas fa-signal"></i></div>
+                        <div class="alert-content">
+                            <h4>Signal Malfunction</h4>
+                            <p>Timer synchronization issue detected</p>
+                            <div class="alert-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> West Bridge</span>
+                                <span>10 mins ago</span>
+                            </div>
+                        </div>
+                        <div class="alert-action"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+
+                    <div class="alert-item">
+                        <div class="alert-icon warning"><i class="fas fa-video-slash"></i></div>
+                        <div class="alert-content">
+                            <h4>Camera Feed Disruption</h4>
+                            <p>Camera 3 experiencing connectivity issues</p>
+                            <div class="alert-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> East Junction</span>
+                                <span>15 mins ago</span>
+                            </div>
+                        </div>
+                        <div class="alert-action"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+
+                    <div class="alert-item">
+                        <div class="alert-icon danger"><i class="fas fa-walkie-talkie"></i></div>
+                        <div class="alert-content">
+                            <h4>Pedestrian Signal Outage <span class="new-tag">New</span></h4>
+                            <p>Pedestrian crossing signal inoperative at high-traffic intersection</p>
+                            <div class="alert-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Downtown Crossing</span>
+                                <span>23 mins ago</span>
+                            </div>
+                        </div>
+                        <div class="alert-action"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="card alert-statistics">
+                    <h3>Alert Statistics</h3>
+                    <ul>
+                        <li><span class="dot critical"></span> Critical Alerts <span>3 <small>(8.1%)</small></span></li>
+                        <li><span class="dot emergency"></span> Emergency Alerts <span>2 <small>(5.4%)</small></span></li>
+                        <li><span class="dot warning"></span> Warnings <span>8 <small>(21.6%)</small></span></li>
+                        <li><span class="dot resolved"></span> Resolved <span>24 <small>(64.9%)</small></span></li>
+                    </ul>
+                </div>
+
+                <div class="card summary-24hr">
+                    <h3>24-Hour Summary <span>Total 37 alerts</span></h3>
+                    <div class="chart-area">
+                        <div class="dummy-chart">
+                            <div class="bar critical" style="height: 40%;"></div>
+                            <div class="bar warning" style="height: 60%;"></div>
+                            <div class="bar emergency" style="height: 20%;"></div>
+                            <div class="bar resolved" style="height: 80%;"></div>
+                             <div class="bar critical" style="height: 30%;"></div>
+                            <div class="bar warning" style="height: 70%;"></div>
+                            <div class="bar emergency" style="height: 25%;"></div>
+                            <div class="bar resolved" style="height: 85%;"></div>
+                            <div class="bar critical" style="height: 45%;"></div>
+                            <div class="bar warning" style="height: 55%;"></div>
+                            <div class="bar emergency" style="height: 30%;"></div>
+                            <div class="bar resolved" style="height: 75%;"></div>
+                             <div class="bar critical" style="height: 35%;"></div>
+                            <div class="bar warning" style="height: 65%;"></div>
+                            <div class="bar emergency" style="height: 28%;"></div>
+                            <div class="bar resolved" style="height: 82%;"></div>
+                        </div>
+                        <div class="chart-labels">
+                            <span>00:00</span>
+                            <span>12:00</span>
+                            <span>23:59</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card notification-settings">
+                    <h3>Notification Settings</h3>
+                    <div class="setting-item">
+                        <span>Critical Alerts <span class="required-tag">Required</span></span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <span>Emergency Vehicles</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <span>System Malfunctions</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <span>Traffic Congestion</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <span>Camera Status</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="advanced-settings-link">
+                        <!-- <a href="#">Advanced Settings</a> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./script/allertScript.js"></script>
+</body>
+</html>
